@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+
+<?php
+	session_start();
+?>
 <html>
 	<head>
 		<link href="./css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -67,7 +71,7 @@
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h4 class="timeline-title">Enero</h4>
-									<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 10 de enero, 2018 10:00 am CST</small></p>
+									<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 10-Ene-2018 10:00</small></p>
 								</div>
 								<div class="timeline-body">
 									<p>Total de puntos:100</p>
@@ -80,7 +84,7 @@
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h4 class="timeline-title">Febrero</h4>
-									<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 10 de febrero, 2018 02:00 pm CST</small></p>
+									<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 10-Feb-2018 14:00</small></p>
 								</div>
 								<div class="timeline-body">
 									<p>Total de puntos:125</p>
@@ -93,7 +97,7 @@
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h4 class="timeline-title">Marzo</h4>
-									<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 10 de marzo, 2018 11:25 am CST</small></p>
+									<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 10-Mar-2018 11:25</small></p>
 								</div>
 								<div class="timeline-body">
 									<p>Total de puntos:114</p>
@@ -106,11 +110,32 @@
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h4 class="timeline-title">Abril</h4>
-									<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 10 de abril, 2018 12:30 pm CST</small></p>
+									<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>
+									<?php if(isset($_SESSION['fechaEvaluacion'])){
+										echo $_SESSION['fechaEvaluacion'];
+									}else{
+										echo "Aun no hay evaluacion";
+									}?></small></p>
 								</div>
 								<div class="timeline-body">
-									<p>Total de puntos:114</p>
-									<p>Califici&oacute;n: Top Performer</p>
+									<p>Total de puntos: <?php if(isset($_SESSION['resultado'])){
+										echo $_SESSION['resultado'];
+									}else{
+										echo "Aun no hay evaluacion!";
+									}
+									?></p>
+									<p>Califici&oacute;n: <?php if(isset($_SESSION['resultado'])){
+										if($_SESSION['resultado']>=60){
+											echo "Top Performer";
+										}elseif($_SESSION['resultado']>30 && $_SESSION['resultado']<60 ){
+											echo "Regular";
+										}else{
+											echo "Poor Performance";
+										}
+									}else{
+										echo "Aun no hay evaluacion!";
+									}
+									?></p>
 								</div>
 								</div>
 							</div>

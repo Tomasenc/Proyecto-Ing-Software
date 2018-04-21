@@ -31,34 +31,34 @@
 			<nav class="navbar navbar-default pull-left" role="navigation">
 				<div class="container-fluid">
 					<h3>I Parte - Aspectos cualitativos a Evaluar</h3>
-					<form>
+					<form id="frmDesempeno" method="POST" action="Evaluar.php">
 						<div class="form-group">
 							<label>Productividad/Eficacia:</label>
-							<input type="text" class="form-control" >
+							<input name="txtProductividad" id="txtProductividad" type="number" class="form-control" >
 						</div>
 						<div class="form-group">
 							<label>Calidad del trabajo:</label>
-							<input type="text" class="form-control" >
+							<input id="txtCalidad" name="txtCalidad" type="number" class="form-control" >
 						</div>
 						<div class="form-group">
 							<label>Responsabilidad:</label>
-							<input type="text" class="form-control" >
+							<input name="txtResponsabilidad" type="number" class="form-control" >
 						</div>
 						<div class="form-group">
 							<label>Cooperacion:</label>
-							<input type="text" class="form-control" >
+							<input name="txtCooperacion" type="number" class="form-control" >
 						</div>
 						<div class="form-group">
 							<label>Relaciones interpersionales:</label>
-							<input type="text" class="form-control" >
+							<input name="txtRelacionInter" type="number" class="form-control" >
 						</div>
 						<div class="form-group">
 							<label>Participaci&oacute;n y compromiso:</label>
-							<input type="text" class="form-control" >
+							<input name="txtCompromiso" type="number" class="form-control" >
 						</div>
 						<div class="form-group">
 							<label>Iniciativa/Creatividad:</label>
-							<input type="text" class="form-control" >
+							<input name="txtCreatividad" type="number" class="form-control" >
 						</div>
 				</nav>
 				<nav class="navbar navbar-default pull-right" role="navigation" >
@@ -66,19 +66,19 @@
 						<h3>II Parte - Aspectos cuantitativos a Evaluar</h3>
 						<div class="form-group">
 							<label>Hacer 30 Side by side reviews al mes:</label>
-							<input type="text" class="form-control" >
+							<input name="txtReviews" type="number" class="form-control" >
 						</div>
 						<div class="form-group">
 							<label>Proveer training del producto:</label>
-							<input type="text" class="form-control" >
+							<input name="txtTraining" type="number" class="form-control" >
 						</div>
 						<div class="form-group">
 							<label>Mentoring/Coaching a compañeros de equipo y otros equipo:</label>
-							<input type="text" class="form-control" >
+							<input name="txtCoaching" type="number" class="form-control" >
 						</div>
 						<div class="form-group">
 							<label>Documentar procesos y conocimiento técnico en LMS:</label>
-							<input type="text" class="form-control" >
+							<input name="txtDocumentacion" type="number" class="form-control" >
 						</div>
 					</div>
 				</nav>
@@ -87,7 +87,7 @@
 						<h3>III Parte - Comentarios adicionales</h3>
 						<div class="form-group" >
 							<label>Percepción acerca de puntualidad, presentación personal,<br/> honradez, confiabilidad, compromiso labora mas del tiempo <br/>establecido en el contrato de trabajo:</p></label>
-							<input type="text" class="form-control" rows="3">
+							<input name="txtValores" type="number" class="form-control" rows="3">
 						</div>
 						<div class="form-group">
 							<label>Aparte de los aspectos aquí evaluados, cuales otros aspectos<br/> considera usted que el evaluado debe mejorar para el próximo período?</label>
@@ -99,7 +99,7 @@
 					</div>
 				</div>
 				</nav>
-					</form>
+				</form>
 				</div> 
 			</nav>
 		</div>
